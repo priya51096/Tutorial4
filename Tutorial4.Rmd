@@ -2,7 +2,7 @@
 title: "Learning to reference figures, tables and sections"
 author: "Priya"
 date: "4/9/2020"
-output: bookdown::html_document
+output: bookdown::html_document2
 keep_md: true
 
 
@@ -17,6 +17,31 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(tidyverse)
+```
+## Learning to reference figures.
+
+```{r Figref,fig.cap= "this is random noise"}
+
+x = seq(1:100)
+y = rnorm(100)
+dat = data.frame(x, y)
+ggplot(dat, aes(x = x, y = y)) +
+geom_line()
+
+```
+## “Learning to reference tables”
+
+```{r, }
+table <- dat %>% head(5)
+table
+caption = "This is a table"
+```
+
+
+
 
 ```{r cars}
 summary(cars)
