@@ -1,5 +1,5 @@
 ---
-title: "Tutorial4"
+title: "Learning to reference figures, tables and sections"
 author: "Priya"
 date: "4/9/2020"
 output: bookdown::html_document
