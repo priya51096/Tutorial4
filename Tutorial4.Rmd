@@ -2,7 +2,8 @@
 title: "Tutorial4"
 author: "Priya"
 date: "4/9/2020"
-output: bookdown::html_document
+output: 
+  bookdown::html_document2
 keep_md: true
 
 
