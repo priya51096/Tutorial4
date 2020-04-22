@@ -8,8 +8,10 @@ keep_md: true
 
 ---
 
+
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE , fig.align = "center")
 ```
 
 ## R Markdown
@@ -21,7 +23,7 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r}
 library(tidyverse)
 ```
-## Learning to reference figures.
+
 
 ```{r Figref,fig.cap= "this is random noise"}
 
@@ -32,14 +34,20 @@ ggplot(dat, aes(x = x, y = y)) +
 geom_line()
 
 ```
-## “Learning to reference tables”
 
-```{r, }
+
+# “Learning to reference tables”
+
+```{r, NAME}
 table <- dat %>% head(5)
-table
-caption = "This is a table"
-```
 
+knitr::kable(
+table[1:5,], booktabs = TRUE,
+  caption = 'A table of the first 5 rows of the COVID19 data')
+
+
+```
+In Table \@ref(tab:NAME) the first five rows of the data set are diplayed
 
 
 
